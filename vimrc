@@ -2,6 +2,9 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Make W and Q work as expected
+cnoreabbrev W w
+cnoreabbrev Q q
 
 " No Vi Compatibility. That just sucks.
 set nocompatible
