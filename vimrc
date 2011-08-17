@@ -130,12 +130,11 @@ set titlestring=%F\ -\ Vim
 filetype on
 filetype plugin on
 
-" Activate a permanent ruler 
+" Activate a permanent ruler
 set ruler
 
 " Disable Toolbar, Scrollbar
-set guioptions-=T
-set guioptions-=r
+set guioptions=agimrec
 
 " Disable the stupid pydoc preview window for the omni completion
 set completeopt-=preview
@@ -143,10 +142,8 @@ set completeopt-=preview
 " Disable the blinking cursor.
 set gcr=a:blinkon0
 
-" Highlight current line 
-if has("gui_running")
-  set cursorline
-endif
+" Highlight current line
+set cursorline
 
 set ttyfast
 
@@ -157,7 +154,7 @@ set wildmode=list:full
 
 
 " Go with smartindent if there is no plugin indent file.
-set autoindent  smartindent
+set autoindent smartindent
 " But don't outdent hashes
 inoremap # X#
 
@@ -209,7 +206,9 @@ endfunction
 
 " Tab Settings
 set smarttab
-set tabstop=8
+set expandtab
+set tabstop=2
+%retab
 
 " Taglist
 "let Tlist_Compact_Format = 1
@@ -274,10 +273,10 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>W <C-w>s
 nnoremap <leader>s :new<CR>
 
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
 
 " ; is an alias for :
 nnoremap ; :
@@ -344,7 +343,7 @@ autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bu
 
 " CSS
 " ---
-autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " rst
 " ---
