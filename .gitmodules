@@ -28,3 +28,9 @@
 [submodule "bundle/SuperTab"]
 	path = bundle/SuperTab
 	url = git://github.com/vim-scripts/SuperTab.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = https://github.com/garrett/snipmate.vim
