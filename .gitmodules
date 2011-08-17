@@ -34,6 +34,3 @@
 [submodule "bundle/csapprox"]
 	path = bundle/csapprox
 	url = https://github.com/godlygeek/csapprox.git
-[submodule "bundle/css_color.vim"]
-	path = bundle/css_color.vim
-	url = https://github.com/vim-scripts/css_color.vim.git
