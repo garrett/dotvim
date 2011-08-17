@@ -1,4 +1,3 @@
-
 set background=light
 
 hi clear
@@ -6,7 +5,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "pyte"
+let colors_name = "snowy"
 "
 " Html-Titles
 hi Title      guifg=#202020 gui=bold
@@ -66,5 +65,3 @@ hi Operator   guifg=#408010
 " color of <TAB>s etc...  
 hi SpecialKey guifg=#d8a080 guibg=#e8e8e8 gui=italic  
 
-" Python Space Errors
-hi pythonSpaceError guibg=#FFD6D6

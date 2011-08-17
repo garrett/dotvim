@@ -42,7 +42,7 @@ else
     " Bottom fill (use e.g. same as LineNr)
     highlight NonText       gui=None guibg=#d3d3d3 guifg=#5daf83
 endif
-highlight Normal        gui=None guibg=#f5f5f5 guifg=DimGray
+highlight Normal        gui=None guibg=#ffffff guifg=DimGray
 highlight Question      gui=none  guifg=SeaGreen2 guibg=bg
 highlight Search        gui=NONE guibg=SlateGray2 guifg=NONE
 highlight SpecialKey    guibg=LightGray guifg=CadetBlue
