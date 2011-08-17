@@ -2,15 +2,24 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Reload the .vimrc on edit
+autocmd BufWritePost .vimrc source %
+
 " Make W and Q work as expected
 cnoreabbrev W w
 cnoreabbrev Q q
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
 
 " No Vi Compatibility. That just sucks.
 set nocompatible
 
 " Fix backspace indentation
 set backspace=indent,eol,start
+
+
+" Bind SuperTab to vim's OmniComplete
+let g:SuperTabDefaultCompletionType = "context"
 
 
 " Convince Vim it can use 256 colors inside Gnome Terminal.
@@ -131,7 +140,7 @@ set titlestring=%F\ -\ Vim
 
 " Enable filetype plugins and indention
 filetype on
-filetype plugin on
+filetype plugin indent on
 
 " Activate a permanent ruler
 set ruler
@@ -211,6 +220,7 @@ endfunction
 set smarttab
 set expandtab
 set tabstop=2
+set colorcolumn=79
 %retab
 
 " Taglist
@@ -347,6 +357,7 @@ autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bu
 " CSS
 " ---
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType sass setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " rst
 " ---
@@ -367,3 +378,8 @@ autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 " ----------
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 let javascript_enable_domhtmlcss=1
+autocmd FileType coffee setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+
+" CoffeeScript
+" ------------
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent shiftwidth=2 expandtab
