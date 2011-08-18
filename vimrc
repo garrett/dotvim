@@ -177,6 +177,7 @@ set gdefault
 set hlsearch
 set incsearch
 set showmatch
+set ignorecase
 
 " Hide matches on <leader>space
 nnoremap <leader><space> :nohlsearch<cr>
