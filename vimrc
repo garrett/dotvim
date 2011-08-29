@@ -2,6 +2,10 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Enable filetype plugins and indention
+filetype on
+filetype plugin indent on
+
 " Reload the .vimrc on edit
 autocmd BufWritePost .vimrc source %
 
@@ -17,9 +21,11 @@ set nocompatible
 " Fix backspace indentation
 set backspace=indent,eol,start
 
+" Popup options
+set cpoptions=aABceFs
 
 " Bind SuperTab to vim's OmniComplete
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 
 
 " Convince Vim it can use 256 colors inside Gnome Terminal.
@@ -70,7 +76,7 @@ else
   "colorscheme mustang
 endif
 
-set background=dark
+set background=light
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
@@ -78,11 +84,10 @@ let g:solarized_visibility="high"
 "colorscheme solarized
 "call togglebg#map("<F5>")
 
-colorscheme summerfruit
-
 " Set fixed height widht of gvim window
 if has('gui_running')
-  set lines=46
+  "set lines=46
+  set lines=78
 endif
 
 " The PC is fast enough, do syntax highlight syncing from start
@@ -137,10 +142,6 @@ set hidden
 set title
 set titleold="Terminal"
 set titlestring=%F\ -\ Vim
-
-" Enable filetype plugins and indention
-filetype on
-filetype plugin indent on
 
 " Activate a permanent ruler
 set ruler
@@ -248,10 +249,10 @@ function! GuiTabLabel()
   if exists('t:title')
     let label .= t:title . ' '
   endif
-  let label .= '[' . bufname(buflist[tabpagewinnr(v:lnum) - 1]) . ']'
+  let label .= bufname(buflist[tabpagewinnr(v:lnum) - 1])
   for bufnr in buflist
     if getbufvar(bufnr, '&modified')
-      let label .= '+'
+      let label .= '*'
       break
     endif
   endfor
@@ -384,3 +385,73 @@ autocmd FileType coffee setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 
 " CoffeeScript
 " ------------
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent shiftwidth=2 expandtab
+
+
+" Colorschemes!
+" -------------
+
+colorscheme solarized
+
+"colorscheme Tomorrow-Night-Blue
+"colorscheme Tomorrow-Night-Eighties
+"colorscheme Tomorrow-Night
+"colorscheme Tomorrow
+"colorscheme autumn
+"colorscheme bayQua
+"colorscheme blackboard
+"colorscheme bluegreen
+"colorscheme clarity
+"colorscheme cool
+"colorscheme darkocean
+"colorscheme darkspectrum
+"colorscheme darktango
+"colorscheme dawn
+"colorscheme desert-light
+"colorscheme desert
+"colorscheme desertEx
+"colorscheme django
+"colorscheme doorhinge
+"colorscheme dusk
+"colorscheme ekvoli
+"colorscheme fruity
+"colorscheme gardener
+"colorscheme github
+"colorscheme github256
+"colorscheme gobo
+"colorscheme grape
+"colorscheme guardian
+"colorscheme guardian2
+"colorscheme industrial
+"colorscheme ir_black
+"colorscheme kib_darktango
+"colorscheme lingodirector
+"colorscheme martin_krischik
+"colorscheme mod_tcsoft
+"colorscheme molokai
+"colorscheme mustang
+"colorscheme mycolors
+"colorscheme myterm
+"colorscheme native
+"colorscheme nicotine
+"colorscheme oceanlight
+"colorscheme pastie
+"colorscheme ps_color
+"colorscheme pyte
+"colorscheme rdark
+"colorscheme rubyforen
+"colorscheme simpleandfriendly
+"colorscheme snowy
+"colorscheme summerfruit
+"colorscheme tango
+"colorscheme tango2
+"colorscheme taqua
+"colorscheme textmate16
+"colorscheme tidy
+"colorscheme twilight
+"colorscheme two2tango
+"colorscheme two2tango2
+"colorscheme vcbc
+"colorscheme vo_dark
+"colorscheme vo_light
+"colorscheme sidewalkchalk
+"colorscheme coal-graal
