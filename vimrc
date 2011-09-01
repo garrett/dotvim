@@ -1,6 +1,7 @@
 " Sexy vim configs with pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 
 " Enable filetype plugins and indention
 filetype on
