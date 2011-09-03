@@ -387,6 +387,17 @@ autocmd FileType coffee setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 
 " ------------
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent shiftwidth=2 expandtab
 
+" Nifty tabularize options
+let mapleader=','
+if exists(":Tabularize")
+  nmap <leader>a= :Tabularize /=<CR>
+  vmap <leader>a= :Tabularize /=<CR>
+  nmap <leader>a: :Tabularize /:\zs<CR>
+  vmap <leader>a: :Tabularize /:\zs<CR>
+  nmap <leader>a, :Tabularize /,\zs<CR>
+  vmap <leader>a, :Tabularize /,\zs<CR>
+endif
+
 
 " Colorschemes!
 " -------------
