@@ -243,6 +243,16 @@ set colorcolumn=79
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
+" only variables and f = () -> functions, no class members, methods etc (yet)
+let g:tagbar_type_coffee = {
+      \ 'ctagstype' : 'coffee',
+      \ 'kinds' : [
+      \ 'f:functions',
+      \ 'v:variables'
+      \ ],
+      \ }
+
+
 " GUI Tab settings
 function! GuiTabLabel()
   let label = ''
