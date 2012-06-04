@@ -447,6 +447,7 @@ colorscheme solarized
 "colorscheme ir_black
 "colorscheme kib_darktango
 "colorscheme lingodirector
+"colorscheme mango
 "colorscheme martin_krischik
 "colorscheme mod_tcsoft
 "colorscheme molokai
@@ -477,3 +478,24 @@ colorscheme solarized
 "colorscheme vo_light
 "colorscheme sidewalkchalk
 "colorscheme coal-graal
+
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
+" Make vim work better on GNOME
+" http://blogs.operationaldynamics.com/andrew/software/gnome-desktop/taming-gvim
+
+source $VIMRUNTIME/mswin.vim
+set guicursor=a:ver1,a:blinkon0
+set mouseshape=n:beam,ve:beam,sd:updown
+
+if has("gui_running")
+  set lines=45 columns=95
+  "set guifont=DejaVu\ Sans\ Mono\ 11
+endif
+
+"set guioptions-=tT
+
+"highlight Constant ctermfg=Blue guifg=DarkBlue
+"highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
+"highlight Comment ctermfg=Grey guifg=DarkGrey
