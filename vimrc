@@ -480,6 +480,23 @@ colorscheme molokai
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
+" Tabs!
+"set showtabline=2 " File tabs always visible
+:nmap <C-S-tab> :tabprevious<cr>
+:nmap <C-tab> :tabnext<cr>
+:nmap <C-t> :tabnew<cr>
+:map <C-t> :tabnew<cr>
+:map <C-S-tab> :tabprevious<cr>
+:map <C-tab> :tabnext<cr>
+:map <C-w> :tabclose<cr>
+:imap <C-S-tab> <ESC>:tabprevious<cr>i
+:imap <C-tab> <ESC>:tabnext<cr>i
+:imap <C-t> <ESC>:tabnew<cr>
+
+" Make vim prefer tabs instead of buffers
+" via http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
+:set switchbuf=usetab,newtab
+
 " Make vim work better on GNOME
 " http://blogs.operationaldynamics.com/andrew/software/gnome-desktop/taming-gvim
 
