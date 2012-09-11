@@ -60,7 +60,9 @@ set viminfo=!,'100,\"100,:20,<50,s10,h,n~/.viminfo
 
 " Move Backup Files to ~/.vim/sessions
 set backupdir=~/.vim/sessions
-set dir=~/.vim/sessions
+set directory=~/.vim/sessions
+"set backupcopy=no
+"set nowritebackup
 
 " Turn off annoying swapfiles
 set noswapfile
