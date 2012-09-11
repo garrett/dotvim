@@ -486,7 +486,12 @@ let g:indent_guides_guide_size = 1
 " Make vim work better on GNOME
 " http://blogs.operationaldynamics.com/andrew/software/gnome-desktop/taming-gvim
 
+" Pull in the Windows default settings
 source $VIMRUNTIME/mswin.vim
+
+" Undo the Windows-style selection, re-enabling vi selection
+set keymodel=""
+
 set guicursor=a:ver1,a:blinkon0
 set mouseshape=n:beam,ve:beam,sd:updown
 
