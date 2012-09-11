@@ -409,7 +409,8 @@ endif
 " Colorschemes!
 " -------------
 
-colorscheme solarized
+"colorscheme solarized
+colorscheme molokai
 
 "colorscheme Tomorrow-Night-Blue
 "colorscheme Tomorrow-Night-Eighties
