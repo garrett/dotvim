@@ -145,7 +145,7 @@ set titlestring=%F\ -\ Vim
 set ruler
 
 " Disable Toolbar, Scrollbar
-set guioptions=agimrec
+set guioptions=agimrc
 
 " Disable the stupid pydoc preview window for the omni completion
 set completeopt-=preview
