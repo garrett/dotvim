@@ -88,12 +88,6 @@ let g:solarized_visibility="high"
 "colorscheme solarized
 "call togglebg#map("<F5>")
 
-" Set fixed height widht of gvim window
-if has('gui_running')
-  "set lines=46
-  set lines=78
-endif
-
 " The PC is fast enough, do syntax highlight syncing from start
 autocmd BufEnter * :syntax sync fromstart
 
@@ -497,12 +491,13 @@ set keymodel=""
 set guicursor=a:ver1,a:blinkon0
 set mouseshape=n:beam,ve:beam,sd:updown
 
+" Set fixed height of gvim window
 if has("gui_running")
-  set lines=45 columns=95
+  set lines=52
+  set columns=95
   "set guifont=DejaVu\ Sans\ Mono\ 11
 endif
 
-"set guioptions-=tT
 
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
