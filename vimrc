@@ -48,9 +48,9 @@ set mousehide
 set mousemodel=popup
 
 " Code Folding, everything folded by default
-set foldmethod=indent
-set foldlevel=99
-set foldenable
+"set foldmethod=indent
+"set foldlevel=99
+"set foldenable
 
 " Make mouse middle click paste without formatting it.
 map <MouseMiddle> <Esc>"*p
@@ -377,8 +377,8 @@ autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 col
 
 " markdown
 " ---
-"autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79
-"autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79
+autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
 
 " vim
 " ---
@@ -516,6 +516,7 @@ if has("gui_running")
   "set guifont=DejaVu\ Sans\ Mono\ 11
 endif
 
+set nofoldenable
 
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
