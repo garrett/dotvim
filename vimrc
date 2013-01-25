@@ -48,8 +48,8 @@ set mousehide
 set mousemodel=popup
 
 " Code Folding, everything folded by default
-"set foldmethod=indent
-"set foldlevel=99
+set foldmethod=indent
+set foldlevel=99
 "set foldenable
 
 " Make mouse middle click paste without formatting it.
@@ -161,7 +161,7 @@ set ttyfast
 " Customize the wildmenu
 set wildmenu
 set wildignore=*.dll,*.o,*.pyc,*.bak,*.exe,*.jpg,*.jpeg,*.png,*.gif,*$py.class,*.class
-set wildmode=list:full
+set wildmode=list:longest,full
 
 
 " Go with smartindent if there is no plugin indent file.
@@ -177,6 +177,10 @@ set hlsearch
 set incsearch
 set showmatch
 set ignorecase
+set smartcase
+
+" Ask if necessary
+set confirm
 
 " Hide matches on <leader>space
 nnoremap <leader><space> :nohlsearch<cr>
@@ -212,11 +216,13 @@ set showmode
 set number
 
 function! CWD()
-    let curdir = substitute(getcwd(), '/home/mnazim', "~/", "g")
+    let curdir = substitute(getcwd(), '/home/garrett', "~/", "g")
     return curdir
 endfunction
 
-" Tab Settings
+" Set current directory to that of the file
+set autochdir
+
 set smarttab
 set expandtab
 set tabstop=2
@@ -327,7 +333,7 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 co
 
 " template language support (SGML / XML too)
 " ------------------------------------------
-" and disable taht stupid html rendering (like making stuff bold etc)
+" and disable that stupid html rendering (like making stuff bold etc)
 
 fun! SelectHTML()
   let n = 1
@@ -377,7 +383,7 @@ autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 col
 
 " markdown
 " ---
-autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79 nofoldenable
 autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
 
 " vim
@@ -395,6 +401,7 @@ autocmd FileType coffee setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent shiftwidth=2 expandtab
 
 " Nifty tabularize options
+" ------------------------
 let mapleader=','
 if exists(":Tabularize")
   nmap <leader>a= :Tabularize /=<CR>
@@ -405,30 +412,32 @@ if exists(":Tabularize")
   vmap <leader>a, :Tabularize /,\zs<CR>
 endif
 
+" Show whitespace toggle (with ",s")
+" ------------------------
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
 
 " Colorschemes!
 " -------------
 
 "colorscheme solarized
-colorscheme molokai
+colorscheme mustang
 
-"colorscheme Tomorrow-Night-Blue
-"colorscheme Tomorrow-Night-Eighties
-"colorscheme Tomorrow-Night
-"colorscheme Tomorrow
 "colorscheme autumn
 "colorscheme bayQua
 "colorscheme blackboard
 "colorscheme bluegreen
 "colorscheme clarity
+"colorscheme coal-graal
 "colorscheme cool
 "colorscheme darkocean
 "colorscheme darkspectrum
 "colorscheme darktango
 "colorscheme dawn
-"colorscheme desert-light
 "colorscheme desert
 "colorscheme desertEx
+"colorscheme desert-light
 "colorscheme django
 "colorscheme doorhinge
 "colorscheme dusk
@@ -460,6 +469,7 @@ colorscheme molokai
 "colorscheme pyte
 "colorscheme rdark
 "colorscheme rubyforen
+"colorscheme sidewalkchalk
 "colorscheme simpleandfriendly
 "colorscheme snowy
 "colorscheme summerfruit
@@ -468,14 +478,17 @@ colorscheme molokai
 "colorscheme taqua
 "colorscheme textmate16
 "colorscheme tidy
+"colorscheme Tomorrow
+"colorscheme Tomorrow-Night
+"colorscheme Tomorrow-Night-Blue
+"colorscheme Tomorrow-Night-Eighties
 "colorscheme twilight
 "colorscheme two2tango
 "colorscheme two2tango2
 "colorscheme vcbc
 "colorscheme vo_dark
 "colorscheme vo_light
-"colorscheme sidewalkchalk
-"colorscheme coal-graal
+"colorscheme zenburn
 
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
@@ -516,7 +529,23 @@ if has("gui_running")
   "set guifont=DejaVu\ Sans\ Mono\ 11
 endif
 
+set foldlevel=999
 set nofoldenable
+
+" Two spaces after punctuation is old-school — and wrong.
+set nojoinspaces
+
+" Crank up the history!
+set history=10000
+
+" Vim likes to fsync a lot...
+set nofsync
+
+" Short message
+set shortmess=atI
+
+set formatoptions=tcqroawn1j
+set textwidth=72
 
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
