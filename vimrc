@@ -466,6 +466,8 @@ colorscheme mustang
 "colorscheme nicotine
 "colorscheme oceanlight
 "colorscheme pastie
+"colorscheme phd
+"colorscheme proton
 "colorscheme ps_color
 "colorscheme pyte
 "colorscheme rdark
