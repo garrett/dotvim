@@ -476,6 +476,7 @@ colorscheme mustang
 "colorscheme tango
 "colorscheme tango2
 "colorscheme taqua
+"colorscheme tesla
 "colorscheme textmate16
 "colorscheme tidy
 "colorscheme Tomorrow
