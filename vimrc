@@ -428,6 +428,7 @@ colorscheme mustang
 "colorscheme bayQua
 "colorscheme blackboard
 "colorscheme bluegreen
+"colorscheme blueshift
 "colorscheme clarity
 "colorscheme coal-graal
 "colorscheme cool
