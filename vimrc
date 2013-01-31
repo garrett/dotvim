@@ -548,7 +548,9 @@ set nofsync
 " Short message
 set shortmess=atI
 
-set formatoptions=tcqroawn1j
+"set formatoptions=tcqroawn1j
+"set formatoptions=tcqroa1j
+"
 set textwidth=72
 
 "highlight Constant ctermfg=Blue guifg=DarkBlue
