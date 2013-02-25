@@ -557,6 +557,22 @@ set textwidth=72
 " Make sure to break at words when wrapping lines
 set linebreak
 
+function! SetWrap()
+  setlocal wrap linebreak nolist
+  set virtualedit=
+  setlocal display+=lastline
+  noremap  <buffer> <silent> <Up>   gk
+  noremap  <buffer> <silent> <Down> gj
+  noremap  <buffer> <silent> <Home> g<Home>
+  noremap  <buffer> <silent> <End>  g<End>
+  inoremap <buffer> <silent> <Up>   <C-o>gk
+  inoremap <buffer> <silent> <Down> <C-o>gj
+  inoremap <buffer> <silent> <Home> <C-o>g<Home>
+  inoremap <buffer> <silent> <End>  <C-o>g<End>
+endfunction
+
+autocmd FileType markdown,text,html,txt call SetWrap()
+
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
 "highlight Comment ctermfg=Grey guifg=DarkGrey
