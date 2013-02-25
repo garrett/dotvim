@@ -553,6 +553,9 @@ set shortmess=atI
 "
 set textwidth=72
 
+" Make sure to break at words when wrapping lines
+set linebreak
+
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
 "highlight Comment ctermfg=Grey guifg=DarkGrey
