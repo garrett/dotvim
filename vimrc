@@ -550,7 +550,8 @@ set shortmess=atI
 
 "set formatoptions=tcqroawn1j
 "set formatoptions=tcqroa1j
-"
+set formatoptions+=1
+
 set textwidth=72
 
 " Make sure to break at words when wrapping lines
