@@ -374,6 +374,7 @@ autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bu
 " ---
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType sass setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+let g:syntastic_csslint_options = "--exclude-list=id,star-property-hack,underscore-property-hack"
 
 " rst
 " ---
