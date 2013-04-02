@@ -85,7 +85,6 @@ let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-"colorscheme solarized
 "call togglebg#map("<F5>")
 
 " The PC is fast enough, do syntax highlight syncing from start
@@ -422,9 +421,6 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Colorschemes!
 " -------------
 
-"colorscheme solarized
-colorscheme mustang
-
 "colorscheme autumn
 "colorscheme bayQua
 "colorscheme blackboard
@@ -476,6 +472,7 @@ colorscheme mustang
 "colorscheme sidewalkchalk
 "colorscheme simpleandfriendly
 "colorscheme snowy
+"colorscheme solarized
 "colorscheme summerfruit
 "colorscheme tango
 "colorscheme tango2
@@ -491,6 +488,7 @@ colorscheme mustang
 "colorscheme two2tango
 "colorscheme two2tango2
 "colorscheme vcbc
+colorscheme railscasts
 "colorscheme vo_dark
 "colorscheme vo_light
 "colorscheme zenburn
