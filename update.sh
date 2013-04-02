@@ -4,4 +4,4 @@
 git pull
 
 # Update submodules to their latest versions
-git submodule foreach git pull origin master
+git submodule foreach "git submodule init && git pull origin master"
