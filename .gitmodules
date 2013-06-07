@@ -64,3 +64,6 @@
 [submodule "bundle/railscasts-theme"]
 	path = bundle/railscasts-theme
 	url = git@github.com:dhruvasagar/vim-railscasts-theme.git
+[submodule "bundle/vim-refugi"]
+	path = bundle/vim-refugi
+	url = https://github.com/seletskiy/vim-refugi.git
