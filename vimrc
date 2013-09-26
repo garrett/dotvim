@@ -572,6 +572,8 @@ endfunction
 
 autocmd FileType markdown,text,html,txt call SetWrap()
 
+let g:neocomplcache_enable_at_startup = 1
+
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
 "highlight Comment ctermfg=Grey guifg=DarkGrey
