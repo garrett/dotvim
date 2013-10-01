@@ -472,7 +472,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme sidewalkchalk
 "colorscheme simpleandfriendly
 "colorscheme snowy
-"colorscheme solarized
+colorscheme solarized
 "colorscheme summerfruit
 "colorscheme tango
 "colorscheme tango2
@@ -488,7 +488,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme two2tango
 "colorscheme two2tango2
 "colorscheme vcbc
-colorscheme railscasts
+"colorscheme railscasts
 "colorscheme vo_dark
 "colorscheme vo_light
 "colorscheme zenburn
