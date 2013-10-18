@@ -572,6 +572,8 @@ endfunction
 
 autocmd FileType markdown,text,html,txt call SetWrap()
 
+autocmd BufReadPost * :GuessIndent
+
 let g:neocomplcache_enable_at_startup = 1
 
 "highlight Constant ctermfg=Blue guifg=DarkBlue
