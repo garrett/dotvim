@@ -94,3 +94,6 @@
 [submodule "bundle/guessindent"]
 	path = bundle/guessindent
 	url = https://github.com/ogier/guessindent
+[submodule "bundle/trailertrash.vim"]
+	path = bundle/trailertrash.vim
+	url = https://github.com/csexton/trailertrash.vim
