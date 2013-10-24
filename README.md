@@ -18,6 +18,7 @@ You can add a plugin as a submodule in the bundle dir like so:
 ### More info
 
 More information on this technique is available at:
+
 * http://mirnazim.org/writings/vim-plugins-i-use/
 * http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
