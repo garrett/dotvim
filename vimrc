@@ -428,6 +428,10 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme blueshift
 "colorscheme clarity
 "colorscheme coal-graal
+"colorscheme clouds
+"colorscheme clouds-midnight
+colorscheme railscasts
+"colorscheme code-school-2
 "colorscheme cool
 "colorscheme darkocean
 "colorscheme darkspectrum
@@ -450,6 +454,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme guardian2
 "colorscheme industrial
 "colorscheme ir_black
+"colorscheme jellybeans
 "colorscheme kib_darktango
 "colorscheme lingodirector
 "colorscheme mango
@@ -472,7 +477,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme sidewalkchalk
 "colorscheme simpleandfriendly
 "colorscheme snowy
-colorscheme solarized
+"colorscheme solarized
 "colorscheme summerfruit
 "colorscheme tango
 "colorscheme tango2
