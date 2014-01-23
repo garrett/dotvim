@@ -106,3 +106,6 @@
 [submodule "bundle/vimroomx"]
 	path = bundle/vimroomx
 	url = https://github.com/meurkens/vimroomx
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
