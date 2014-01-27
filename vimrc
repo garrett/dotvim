@@ -583,6 +583,8 @@ let g:neocomplcache_enable_at_startup = 1
 
 let g:ctrlp_custom_ignore = '\vbuild$'
 
+let g:nerdtree_tabs_open_on_gui_startup = 0
+
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
 "highlight Comment ctermfg=Grey guifg=DarkGrey
