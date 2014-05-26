@@ -421,6 +421,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Colorschemes!
 " -------------
 
+"colorscheme base16-ocean
 "colorscheme autumn
 "colorscheme bayQua
 "colorscheme blackboard
@@ -430,7 +431,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme coal-graal
 "colorscheme clouds
 "colorscheme clouds-midnight
-colorscheme railscasts
+"colorscheme railscasts
 "colorscheme code-school-2
 "colorscheme cool
 "colorscheme darkocean
@@ -486,7 +487,7 @@ colorscheme railscasts
 "colorscheme textmate16
 "colorscheme tidy
 "colorscheme Tomorrow
-"colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night
 "colorscheme Tomorrow-Night-Blue
 "colorscheme Tomorrow-Night-Eighties
 "colorscheme twilight
@@ -535,6 +536,8 @@ if has("gui_running")
   set lines=52
   set columns=95
   "set guifont=DejaVu\ Sans\ Mono\ 11
+  set background=dark
+  colorscheme base16-ocean
 endif
 
 set foldlevel=999
