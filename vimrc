@@ -564,6 +564,9 @@ set textwidth=72
 " Make sure to break at words when wrapping lines
 set linebreak
 
+" Don't conceal characters (used by vim-pandoc-syntax)
+set cole=0
+
 function! SetWrap()
   setlocal wrap linebreak nolist
   set virtualedit=
