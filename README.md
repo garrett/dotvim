@@ -4,8 +4,11 @@ My vim config.
 
 ## Install
 
-Clone to `~/.vim/` and run `./setup.sh` (it should (hopefully) back up your existing `~/.vimrc`)
+Clone to `~/.vim/` and run `./setup.sh` (it should (hopefully) back up your existing `~/.vimrc`):
 
+```
+git clone https://github.com/garrett/dotvim.git ~/.vim/ && cd ~/.vim/ && ./setup.sh && cd -
+```
 
 ## Add a plugin
 
