@@ -74,7 +74,8 @@ set undofile
 " Enable Syntax Colors
 syntax on
 if has("gui_running")
-  set guifont=Mensch\ 12
+  "set guifont=Mensch\ 12
+  set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
   "set guifont=Inconsolata\ 11
 else
   "colorscheme mustang
