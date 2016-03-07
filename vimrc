@@ -75,7 +75,9 @@ set undofile
 syntax on
 if has("gui_running")
   "set guifont=Mensch\ 12
-  set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
+  "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
+  set guifont=Source\ Code\ Pro\ Regular\ 13
+  "set guifont=Fira\ Mono\ 12
   "set guifont=Inconsolata\ 11
 else
   "colorscheme mustang
@@ -84,8 +86,8 @@ endif
 set background=light
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
 "call togglebg#map("<F5>")
 
 " The PC is fast enough, do syntax highlight syncing from start
@@ -374,7 +376,7 @@ autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bu
 " ---
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType sass setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-let g:syntastic_csslint_options = "--exclude-list=id,star-property-hack,underscore-property-hack"
+let g:syntastic_css_csslint_options = "--exclude-list=id,star-property-hack,underscore-property-hack"
 
 " rst
 " ---
@@ -479,7 +481,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme sidewalkchalk
 "colorscheme simpleandfriendly
 "colorscheme snowy
-"colorscheme solarized
+colorscheme solarized
 "colorscheme summerfruit
 "colorscheme tango
 "colorscheme tango2
@@ -488,7 +490,7 @@ nmap <silent> <leader>s :set nolist!<CR>
 "colorscheme textmate16
 "colorscheme tidy
 "colorscheme Tomorrow
-colorscheme Tomorrow-Night
+"colorscheme Tomorrow-Night
 "colorscheme Tomorrow-Night-Blue
 "colorscheme Tomorrow-Night-Eighties
 "colorscheme twilight
@@ -537,8 +539,9 @@ if has("gui_running")
   set lines=52
   set columns=95
   "set guifont=DejaVu\ Sans\ Mono\ 11
-  set background=dark
-  colorscheme base16-ocean
+  "set background=dark
+  "colorscheme base16-ocean
+  "colorscheme summerfruit
 endif
 
 set foldlevel=999
@@ -595,3 +598,28 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 "highlight Constant ctermfg=Blue guifg=DarkBlue
 "highlight String ctermfg=Blue cterm=bold guifg=DarkBlue gui=bold
 "highlight Comment ctermfg=Grey guifg=DarkGrey
+
+highlight Comment gui=bold
+
+" Syntastic
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:syntastic_haml_checkers = ['haml_lint', 'haml']
+let g:syntastic_sass_checkers = ['sassc', 'sass']
+
+" incsearch: https://github.com/haya14busa/incsearch.vim
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+"<Over>(incsearch-next)
+"<Over>(incsearch-prev)
+"<Over>(incsearch-scroll-f)
+"<Over>(incsearch-scroll-b)
