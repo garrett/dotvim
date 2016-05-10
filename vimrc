@@ -1,11 +1,59 @@
-" Sexy vim configs with pathogen
-call pathogen#infect()
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+  Plug 'Lokaltog/vim-easymotion'
+  Plug 'Raimondi/delimitMate'
+  Plug 'Shougo/neocomplcache.vim'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'ap/vim-css-color'
+  Plug 'bling/vim-airline'
+  Plug 'chriskempson/base16-vim'
+  Plug 'csexton/trailertrash.vim'
+  Plug 'dhruvasagar/vim-railscasts-theme'
+  Plug 'docunext/closetag.vim'
+  Plug 'godlygeek/csapprox'
+  Plug 'godlygeek/tabular'
+  Plug 'haya14busa/incsearch.vim'
+  Plug 'jaxbot/semantic-highlight.vim'
+  Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'jtratner/vim-flavored-markdown'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'kien/ctrlp.vim'
+  Plug 'majutsushi/tagbar'
+  Plug 'meurkens/vimroomx'
+  Plug 'mileszs/ack.vim'
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'ngmy/vim-rubocop'
+  Plug 'ogier/guessindent'
+  Plug 'othree/html5.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/syntastic'
+  Plug 'seletskiy/vim-refugi'
+  Plug 'sjl/threesome.vim'
+  Plug 'tpope/vim-bundler'
+  Plug 'tpope/vim-haml'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-rake'
+  Plug 'tpope/vim-vividchalk'
+  Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'vim-pandoc/vim-pantondoc'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'vim-scripts/SuperTab'
+  Plug 'vim-scripts/VOoM'
+  Plug 'zeis/vim-kolor'
+  Plug 'git://git.wincent.com/command-t.git'
+call plug#end()
 
 " Enable filetype plugins and indention
-filetype on
-filetype plugin indent on
+"filetype on
+"filetype plugin indent on
 
 " Reload the .vimrc on edit
 autocmd BufWritePost .vimrc source %
