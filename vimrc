@@ -49,6 +49,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-scripts/SuperTab'
   Plug 'vim-scripts/VOoM'
   Plug 'zeis/vim-kolor'
+  Plug 'rust-lang/rust.vim'
   Plug 'git://git.wincent.com/command-t.git'
 call plug#end()
 
