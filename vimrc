@@ -644,6 +644,18 @@ let g:neocomplcache_enable_at_startup = 1
 
 let g:ctrlp_custom_ignore = '\vbuild$'
 
+" From https://github.com/kien/ctrlp.vim/issues/174#issuecomment-218866242
+if executable('ag')
+  " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast, respects .gitignore
+  " and .agignore. Ignores hidden files by default.
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -f -g ""'
+else
+  "ctrl+p ignore files in .gitignore
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+endif
+
 let g:nerdtree_tabs_open_on_gui_startup = 0
 
 "highlight Constant ctermfg=Blue guifg=DarkBlue
