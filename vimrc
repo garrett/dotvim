@@ -42,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-rake'
   Plug 'tpope/vim-vividchalk'
+  Plug 'tpope/vim-liquid'
   Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'vim-pandoc/vim-pantondoc'
   Plug 'vim-ruby/vim-ruby'
@@ -414,7 +415,8 @@ autocmd BufNewFile,BufRead *.rhtml setlocal ft=eruby
 autocmd BufNewFile,BufRead *.mako setlocal ft=mako
 autocmd BufNewFile,BufRead *.tmpl setlocal ft=htmljinja
 autocmd BufNewFile,BufRead *.py_tmpl setlocal ft=python
-autocmd BufNewFile,BufRead *.html,*.htm  call SelectHTML()
+"autocmd BufNewFile,BufRead *.html,*.htm  call SelectHTML()
+autocmd BufNewFile,BufRead *.html,*.htm setlocal ft=liquid
 let html_no_rendering=1
 
 autocmd FileType html,htmldjango,htmljinja,eruby,mako let b:closetag_html_style=1
