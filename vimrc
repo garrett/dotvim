@@ -420,9 +420,6 @@ autocmd BufNewFile,BufRead *.py_tmpl setlocal ft=python
 autocmd BufNewFile,BufRead *.html,*.htm setlocal ft=liquid
 let html_no_rendering=1
 
-autocmd FileType html,htmldjango,htmljinja,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
-
 " CSS
 " ---
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
