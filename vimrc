@@ -43,6 +43,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rake'
   Plug 'tpope/vim-vividchalk'
   Plug 'tpope/vim-liquid'
+  Plug 'tpope/vim-fugitive'
   Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'vim-pandoc/vim-pantondoc'
   Plug 'vim-ruby/vim-ruby'
