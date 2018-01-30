@@ -129,9 +129,11 @@ if has("gui_running")
   "set guifont=Mensch\ 12
   "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
   "set guifont=Source\ Code\ Pro\ Regular\ 13
-  set guifont=Fira\ Code\ 12
   "set guifont=Fira\ Mono\ 12
   "set guifont=Inconsolata\ 11
+
+  """ Fira Code is available @ https://github.com/tonsky/FiraCode
+  set guifont=Fira\ Code\ 12
 else
   "colorscheme mustang
 endif
