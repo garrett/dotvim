@@ -44,6 +44,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-vividchalk'
   Plug 'tpope/vim-liquid'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
   Plug 'junegunn/gv.vim'
   Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'vim-pandoc/vim-pantondoc'
